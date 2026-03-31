@@ -1,6 +1,7 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+/vscode
 /node_modules
 /.pnp
 .pnp.*
@@ -23,6 +24,10 @@
 # misc
 .DS_Store
 *.pem
+.idea/
+*.swp
+*.swo
+*~
 
 # debug
 npm-debug.log*
@@ -38,6 +43,18 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+**/*.tsbuildinfo
 next-env.d.ts
 
+# generated files
 /app/generated/prisma
+src/generated/
+
+# turbo
+.turbo/
+
+# build outputs
+/dist/
+
+# caches
+.cache/

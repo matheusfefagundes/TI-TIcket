@@ -1,0 +1,37 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@theme {
+  --breakpoint-2lg: 90rem;
+
+  --color-brand-dark: #2E3DA3;
+  --color-brand-base: #5165E1;
+  --color-brand-light: #8996EB;
+
+  --color-app-gray-100: #151619;
+  --color-app-gray-200: #1E2024;
+  --color-app-gray-300: #535964;
+  --color-app-gray-400: #858B99;
+  --color-app-gray-500: #E3E5E8;
+  --color-app-gray-600: #F9FAFA;
+  --color-app-blue-100: #1E2024;
+
+  --color-feedback-danger: #D03E3E;
+  --color-feedback-open: #CC3D6A;
+  --color-feedback-progress: #355EC5;
+  --color-feedback-done: #508B26;
+
+  --leading-default: 140%;
+
+  --font-weight-regular: 400;
+  --font-weight-bold: 700;
+
+  --color-primary: var(--color-app-gray-200);
+  --color-primary-foreground: #FFFFFF;
+
+  --color-secondary: var(--color-brand-dark);
+  --color-secondary-foreground: #000000;
+
+  --color-outline: var(--color-app-gray-500);
+  --color-outline-foreground: #000000;
+}
