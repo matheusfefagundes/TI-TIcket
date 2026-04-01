@@ -1,7 +1,6 @@
 "use client";
 
 import { Form } from "../../../components/Form";
-import { SocialAuth } from "../../../components/SocialAuth";
 import { Button } from "../../../components/ui/button";
 import { Field, FieldLabel } from "../../../components/ui/field";
 import { Input } from "../../../components/ui/input";
@@ -133,7 +132,6 @@ export default function RegisterPage() {
             </Button>
           </Field>
         </Form>
-        <SocialAuth subtitle="Ou cadastre-se com" />
         <p className="text-app-gray-400 mt-6 text-center text-sm italic">
           Já tem uma conta ?{" "}
           <Link className="text-app-gray-200" href="/">

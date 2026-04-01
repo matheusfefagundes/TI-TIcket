@@ -6,7 +6,6 @@ import { Form } from "../../components/Form";
 import { Button } from "../../components/ui/button";
 import { Field, FieldLabel } from "../../components/ui/field";
 import { Input } from "../../components/ui/input";
-import { SocialAuth } from "../../components/SocialAuth";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, SignInFormData } from "../../schemas/login";
@@ -78,7 +77,6 @@ export default function LoginPage() {
             </Button>
           </Field>
         </Form>
-        <SocialAuth subtitle="Ou entre com" />
         <p className="text-app-gray-400 mt-6 text-center text-sm italic">
           Ainda não tem uma conta ?{" "}
           <Link className="text-app-gray-200" href="/register">

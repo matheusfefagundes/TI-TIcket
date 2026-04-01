@@ -14,7 +14,7 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
         <div className="flex items-center justify-center gap-3 py-6 pt-8">
           <Image
             src="/Logo_IconDark.svg"
-            alt="Ícone do help desk"
+            alt="Ícone do ti-ticket"
             height={40}
             width={40}
             className="object-cover"

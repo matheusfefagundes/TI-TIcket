@@ -1,12 +1,12 @@
-import { Lato } from "next/font/google";
+import { Inter } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 import AuthProvider from "../providers/auth";
 import { Toaster } from "sonner";
 
-const lato = Lato({
+const inter = Inter({
   subsets: ["latin", "latin-ext"],
-  variable: "--font-lato",
+  variable: "--font-inter",
   weight: ["400", "700"],
 });
 
@@ -21,7 +21,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${lato.variable} antialiased`}>
+      <body className={`${inter.variable} antialiased`}>
         <AuthProvider>
           {children}
           <Toaster />
