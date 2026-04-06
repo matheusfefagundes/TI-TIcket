@@ -1,9 +1,9 @@
-import { cn } from "../lib/classMerge";
+import { cn } from "@/lib/classMerge";
 import { LogOut } from "lucide-react";
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { useLogout } from "../hooks/useLogout";
-import { useProfile } from "../hooks/useProfile";
+import { useLogout } from "@/hooks/useLogout";
+import { useProfile } from "@/hooks/useProfile";
 import { PopupProfile } from "./PopupProfile";
 
 interface ProfileOptionsProps {

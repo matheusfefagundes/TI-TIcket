@@ -1,8 +1,8 @@
-import { UpdateClient } from "../actions/UpdateClient";
+import { UpdateClient } from "@/actions/UpdateClient";
 import {
   UpdateClientFormData,
   updateClientSchema,
-} from "../schemas/update-client";
+} from "@/schemas/update-client";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCallback } from "react";
 import { useForm } from "react-hook-form";

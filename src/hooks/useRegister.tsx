@@ -1,7 +1,7 @@
 "use client";
 
-import { RegisterFormData } from "../schemas/register";
-import { api } from "../services/api";
+import { RegisterFormData } from "@/schemas/register";
+import { api } from "@/services/api";
 import { AxiosError } from "axios";
 import { useRouter } from "next/navigation";
 import { useState } from "react";

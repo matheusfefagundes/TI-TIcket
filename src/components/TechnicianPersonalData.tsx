@@ -10,8 +10,8 @@ import {
   FieldSet,
 } from "./ui/field";
 import { Input } from "./ui/input";
-import { NewTechnicianFormData } from "../schemas/new-technician";
-import { useTechnicianDetails } from "../hooks/useTechnicianDetails";
+import { NewTechnicianFormData } from "@/schemas/new-technician";
+import { useTechnicianDetails } from "@/hooks/useTechnicianDetails";
 
 export function TechnicianPersonalData() {
   const { params } = useTechnicianDetails();

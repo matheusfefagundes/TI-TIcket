@@ -2,7 +2,7 @@
 
 import * as React from "react";
 
-import { cn } from "../../lib/classMerge";
+import { cn } from "@/lib/classMerge";
 
 function Table({ className, ...props }: React.ComponentProps<"table">) {
   return (

@@ -1,13 +1,13 @@
 "use client";
 
-import { GetAllServices } from "../actions/GetAllServices";
-import { GetAllUsers } from "../actions/GetAllUsers";
-import { NewTicket } from "../actions/NewTicket";
-import { UserRole } from "../generated/prisma/enums";
-import { NewTicketData } from "../schemas/new-ticket";
+import { GetAllServices } from "@/actions/GetAllServices";
+import { GetAllUsers } from "@/actions/GetAllUsers";
+import { NewTicket } from "@/actions/NewTicket";
+import { UserRole } from "@/generated/prisma/enums";
+import { NewTicketData } from "@/schemas/new-ticket";
 import { useCallback, useEffect, useState } from "react";
 import { toast } from "sonner";
-import { Prisma, Service } from "../generated/prisma/client";
+import { Prisma, Service } from "@/generated/prisma/client";
 import { useRouter } from "next/navigation";
 
 type TechnicianProps = Prisma.UserGetPayload<{

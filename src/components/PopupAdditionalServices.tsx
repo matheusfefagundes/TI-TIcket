@@ -25,7 +25,7 @@ import { Form } from "./Form";
 import {
   useAdditionalServicesProps,
   useAdditionalServices,
-} from "../hooks/useAdditionalServices";
+} from "@/hooks/useAdditionalServices";
 
 export function PopupAdditionalServices({
   data,

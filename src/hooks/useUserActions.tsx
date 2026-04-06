@@ -1,5 +1,5 @@
-import { DeleteClient } from "../actions/DeleteClient";
-import { DisableTechnician } from "../actions/DisableTechnician";
+import { DeleteClient } from "@/actions/DeleteClient";
+import { DisableTechnician } from "@/actions/DisableTechnician";
 
 export function useUserActions(userId: string) {
   const disableTechnician = async () => {

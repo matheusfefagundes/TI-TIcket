@@ -1,7 +1,7 @@
 "use client";
 
-import { ChangePasswordAction } from "../actions/ChangePasswordAction";
-import { ChangePasswordData } from "../schemas/change-password";
+import { ChangePasswordAction } from "@/actions/ChangePasswordAction";
+import { ChangePasswordData } from "@/schemas/change-password";
 import { useState } from "react";
 import { toast } from "sonner";
 

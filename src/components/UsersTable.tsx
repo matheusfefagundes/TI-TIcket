@@ -1,11 +1,11 @@
 "use client";
 
-import { DataTable } from "../components/DataTable";
-import { InitialsAvatar } from "../components/InitialsAvatar";
-import { TimeSlotsTechnicial } from "../components/TimeSlotsTechnicial";
-import { Button } from "../components/ui/button";
-import { useIsRoute } from "../hooks/useIsRoute";
-import { cn } from "../lib/classMerge";
+import { DataTable } from "@/components/DataTable";
+import { InitialsAvatar } from "@/components/InitialsAvatar";
+import { TimeSlotsTechnicial } from "@/components/TimeSlotsTechnicial";
+import { Button } from "@/components/ui/button";
+import { useIsRoute } from "@/hooks/useIsRoute";
+import { cn } from "@/lib/classMerge";
 import { ColumnDef } from "@tanstack/react-table";
 import Image from "next/image";
 import { DeleteUser } from "./DeleteUser";

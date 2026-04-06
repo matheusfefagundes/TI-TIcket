@@ -3,11 +3,11 @@ import { UpdateTechnicians } from "@/actions/UpdateTechnicians";
 import {
   NewTechnicianFormData,
   newTechnicianSchema,
-} from "../schemas/new-technician";
+} from "@/schemas/new-technician";
 import {
   UpdateTechnicianFormData,
   updateTechnicianSchema,
-} from "../schemas/update-technician";
+} from "@/schemas/update-technician";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useParams, useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";

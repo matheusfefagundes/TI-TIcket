@@ -2,7 +2,7 @@ import Image from "next/image";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";
 import { useFormContext } from "react-hook-form";
-import { NewTechnicianFormData } from "../schemas/new-technician";
+import { NewTechnicianFormData } from "@/schemas/new-technician";
 
 type TimeSlotsProps = {
   init: string;

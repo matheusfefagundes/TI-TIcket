@@ -1,6 +1,6 @@
 "use client";
 
-import { UserRole } from "../generated/prisma/enums";
+import { UserRole } from "@/generated/prisma/enums";
 import { useSession } from "next-auth/react";
 
 export function useProfile() {

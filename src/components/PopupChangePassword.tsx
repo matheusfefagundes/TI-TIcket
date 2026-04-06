@@ -14,8 +14,8 @@ import { useForm } from "react-hook-form";
 import {
   ChangePasswordData,
   changePasswordSchema,
-} from "../schemas/change-password";
-import { useChangePassword } from "../hooks/useChangePassword";
+} from "@/schemas/change-password";
+import { useChangePassword } from "@/hooks/useChangePassword";
 import { Button } from "./ui/button";
 import { zodResolver } from "@hookform/resolvers/zod";
 

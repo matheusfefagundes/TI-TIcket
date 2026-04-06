@@ -5,7 +5,7 @@ import { Button } from "./ui/button";
 import { InitialsAvatar } from "./InitialsAvatar";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { useUserImage } from "../hooks/useUserImage";
-import { cn } from "../lib/classMerge";
+import { cn } from "@/lib/classMerge";
 
 interface AppFooterProps {
   onClick?: () => void;

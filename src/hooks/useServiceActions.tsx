@@ -1,10 +1,10 @@
-import { NewService } from "../actions/NewService";
-import { UpdateService } from "../actions/UpdateService";
-import { NewServiceFormData, newServiceSchema } from "../schemas/new-service";
+import { NewService } from "@/actions/NewService";
+import { UpdateService } from "@/actions/UpdateService";
+import { NewServiceFormData, newServiceSchema } from "@/schemas/new-service";
 import {
   UpdateServiceFormData,
   updateServiceSchema,
-} from "../schemas/update-service";
+} from "@/schemas/update-service";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useCallback } from "react";
 import { useForm } from "react-hook-form";

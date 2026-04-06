@@ -8,7 +8,7 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { FormProvider } from "react-hook-form";
-import { useServicesActions } from "../hooks/useServiceActions";
+import { useServicesActions } from "@/hooks/useServiceActions";
 import { Field, FieldLabel } from "./ui/field";
 import { Input } from "./ui/input";
 import { Button } from "./ui/button";

@@ -1,4 +1,4 @@
-import { SignInFormData } from "../schemas/login";
+import { SignInFormData } from "@/schemas/login";
 import { signIn } from "next-auth/react";
 import { useRouter } from "next/navigation";
 import { toast } from "sonner";

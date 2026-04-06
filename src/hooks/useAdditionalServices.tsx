@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { UpdateTicket } from "../actions/UpdateTicket";
-import { Service } from "../generated/prisma/client";
+import { UpdateTicket } from "@/actions/UpdateTicket";
+import { Service } from "@/generated/prisma/client";
 import { toast } from "sonner";
 
 export interface useAdditionalServicesProps {

@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import { cn } from "../../lib/classMerge";
+import { cn } from "@/lib/classMerge";
 
 function Textarea({ className, ...props }: React.ComponentProps<"textarea">) {
   return (

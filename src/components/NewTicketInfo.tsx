@@ -1,7 +1,7 @@
 "use client";
 
 import { Field, FieldLabel } from "./ui/field";
-import { useNewTicket } from "../hooks/useNewTicket";
+import { useNewTicket } from "@/hooks/useNewTicket";
 import { Input } from "./ui/input";
 import { Textarea } from "./ui/textarea";
 import {
@@ -14,7 +14,7 @@ import {
   SelectValue,
 } from "./ui/select";
 import { Controller, useFormContext } from "react-hook-form";
-import { NewTicketData } from "../schemas/new-ticket";
+import { NewTicketData } from "@/schemas/new-ticket";
 
 export function NewTicketInfo() {
   const { services, technician } = useNewTicket();

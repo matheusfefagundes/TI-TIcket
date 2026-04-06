@@ -1,7 +1,7 @@
 "use server";
 
-import { prisma } from "../lib/prisma";
-import { ChangePasswordData } from "../schemas/change-password";
+import { prisma } from "@/lib/prisma";
+import { ChangePasswordData } from "@/schemas/change-password";
 import { compare, hash } from "bcrypt";
 
 export const ChangePasswordAction = async (

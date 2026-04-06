@@ -1,5 +1,5 @@
-import { useScheduleLimit } from "../hooks/useScheduleLimit";
-import { Prisma } from "../generated/prisma/client";
+import { useScheduleLimit } from "@/hooks/useScheduleLimit";
+import { Prisma } from "@/generated/prisma/client";
 
 interface TimeSlotsTechnicialProps {
   availabilities: Prisma.TechnicianAvailabilityGetPayload<{

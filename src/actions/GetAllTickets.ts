@@ -1,7 +1,7 @@
 "use server";
 
-import { prisma } from "../lib/prisma";
-import { TicketStatus } from "../generated/prisma/enums";
+import { prisma } from "@/lib/prisma";
+import { TicketStatus } from "@/generated/prisma/enums";
 
 interface GetAllTicketsProps {
   status?: TicketStatus;

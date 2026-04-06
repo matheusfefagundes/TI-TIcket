@@ -10,10 +10,10 @@ import {
   DialogTrigger,
 } from "./ui/dialog";
 import { Button } from "./ui/button";
-import { DisableTechnician } from "../actions/DisableTechnician";
-import { useIsRoute } from "../hooks/useIsRoute";
-import { DeleteClient } from "../actions/DeleteClient";
-import { useUserActions } from "../hooks/useUserActions";
+import { DisableTechnician } from "@/actions/DisableTechnician";
+import { useIsRoute } from "@/hooks/useIsRoute";
+import { DeleteClient } from "@/actions/DeleteClient";
+import { useUserActions } from "@/hooks/useUserActions";
 
 interface DeleteUserProps {
   name: string;

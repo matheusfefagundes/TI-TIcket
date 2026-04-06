@@ -1,4 +1,4 @@
-  import { cn } from "../lib/classMerge";
+  import { cn } from "@/lib/classMerge";
 
 interface InitialsAvatarProps {
   name: string;

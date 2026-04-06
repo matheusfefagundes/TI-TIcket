@@ -10,7 +10,7 @@ import {
 } from "./ui/field";
 import { TimeSlots } from "./TimeSlots";
 import { useFormContext } from "react-hook-form";
-import { NewTechnicianFormData } from "../schemas/new-technician";
+import { NewTechnicianFormData } from "@/schemas/new-technician";
 
 export function TechnicianAvailability() {
   const {

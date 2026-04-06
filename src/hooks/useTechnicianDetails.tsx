@@ -1,5 +1,5 @@
 import { FetchTechnicianById } from "@/actions/FetchTechnicianById";
-import { NewTechnicianFormData } from "../schemas/new-technician";
+import { NewTechnicianFormData } from "@/schemas/new-technician";
 import { useParams } from "next/navigation";
 import { useCallback, useEffect, useState } from "react";
 import { useFormContext } from "react-hook-form";

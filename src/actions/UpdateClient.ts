@@ -1,7 +1,7 @@
 "use server";
 
-import { prisma } from "../lib/prisma";
-import { UpdateClientFormData } from "../schemas/update-client";
+import { prisma } from "@/lib/prisma";
+import { UpdateClientFormData } from "@/schemas/update-client";
 import { revalidatePath } from "next/cache";
 
 interface UpdateClientProps {

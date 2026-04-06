@@ -1,7 +1,7 @@
 "use server";
 
-import { prisma } from "../lib/prisma";
-import { NewServiceFormData } from "../schemas/new-service";
+import { prisma } from "@/lib/prisma";
+import { NewServiceFormData } from "@/schemas/new-service";
 import { revalidatePath } from "next/cache";
 
 interface NewServiceProps {

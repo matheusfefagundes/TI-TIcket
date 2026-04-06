@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { DeleteServiceProps } from "../actions/DeleteService";
-import { useDeleteService } from "../hooks/useDeleteService";
+import { DeleteServiceProps } from "@/actions/DeleteService";
+import { useDeleteService } from "@/hooks/useDeleteService";
 
 export function DeleteService({
   serviceId,

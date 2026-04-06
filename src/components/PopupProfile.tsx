@@ -13,7 +13,7 @@ import { Avatar, AvatarFallback } from "./ui/avatar";
 import { AvatarImage } from "@radix-ui/react-avatar";
 import { Input } from "./ui/input";
 import { ReactNode } from "react";
-import { useTechnicianAvailabilities } from "../hooks/useTechnicianAvailabilities";
+import { useTechnicianAvailabilities } from "@/hooks/useTechnicianAvailabilities";
 import { useUserImage } from "../hooks/useUserImage";
 import { InitialsAvatar } from "./InitialsAvatar";
 import { PopupChangePassword } from "./PopupChangePassword";

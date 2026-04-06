@@ -1,4 +1,4 @@
-import { DeleteService, DeleteServiceProps } from "../actions/DeleteService";
+import { DeleteService, DeleteServiceProps } from "@/actions/DeleteService";
 import { toast } from "sonner";
 
 export function useDeleteService() {

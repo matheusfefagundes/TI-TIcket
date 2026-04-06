@@ -10,7 +10,7 @@ import {
 } from "./ui/dialog";
 import Image from "next/image";
 import { FormProvider } from "react-hook-form";
-import { useClientProfile } from "../hooks/useClientProfile";
+import { useClientProfile } from "@/hooks/useClientProfile";
 import { Field, FieldGroup, FieldLabel } from "./ui/field";
 import { InitialsAvatar } from "./InitialsAvatar";
 import { Input } from "./ui/input";

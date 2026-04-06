@@ -3,7 +3,7 @@
 import { useRouter } from "next/navigation";
 import { Button } from "./ui/button";
 import { ArrowLeft } from "lucide-react";
-import { cn } from "../lib/classMerge";
+import { cn } from "@/lib/classMerge";
 
 interface BackBottomProps {
   className?: string;

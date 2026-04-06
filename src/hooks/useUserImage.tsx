@@ -1,7 +1,7 @@
 "use client";
 
-import { DeleteImage } from "../actions/DeleteImage";
-import { GetUserImage } from "../actions/GetUserImage";
+import { DeleteImage } from "@/actions/DeleteImage";
+import { GetUserImage } from "@/actions/GetUserImage";
 import { useSession } from "next-auth/react";
 import { useState } from "react";
 import { toast } from "sonner";

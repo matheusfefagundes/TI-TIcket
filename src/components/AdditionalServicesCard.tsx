@@ -1,6 +1,6 @@
-import { GetAllTicketServices } from "../actions/GetAllTicketServices";
+import { GetAllTicketServices } from "@/actions/GetAllTicketServices";
 import { PopupAdditionalServices } from "./PopupAdditionalServices";
-import { GetAvailableServices } from "../actions/GetAvailableServices";
+import { GetAvailableServices } from "@/actions/GetAvailableServices";
 import { DeleteService } from "./DeleteService";
 
 interface AdditionalServicesCardProps {

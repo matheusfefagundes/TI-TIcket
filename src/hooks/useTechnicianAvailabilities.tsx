@@ -1,6 +1,6 @@
 "use client";
 
-import { GetUniqueTechnician } from "../actions/GetUniqueTecnhinician";
+import { GetUniqueTechnician } from "@/actions/GetUniqueTecnhinician";
 import { useCallback, useEffect, useState } from "react";
 
 export function useTechnicianAvailabilities(technicianId?: string) {

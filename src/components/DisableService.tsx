@@ -1,8 +1,8 @@
 import Image from "next/image";
 import { Button } from "./ui/button";
-import { statusServiceMap } from "../utils/status-service";
-import { ServiceStatus } from "../generated/prisma/enums";
-import { DisableService } from "../actions/DisableService";
+import { statusServiceMap } from "@/utils/status-service";
+import { ServiceStatus } from "@/generated/prisma/enums";
+import { DisableService } from "@/actions/DisableService";
 
 interface ServiceDisableProps {
   isActive: ServiceStatus;
