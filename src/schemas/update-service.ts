@@ -1,5 +1,5 @@
 import z from "zod";
-import { ServiceStatus } from "../generated/prisma/enums";
+import { ServiceStatus } from "@/generated/prisma/enums";
 
 export const updateServiceSchema = z.object({
   title: z.string().min(10, "Mínimo de 10 digítos").optional(),
