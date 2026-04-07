@@ -1,6 +1,8 @@
 "use client";
 
 import Link from "next/link";
+import { useState } from "react";
+import { Eye, EyeOff } from "lucide-react"; 
 
 import { Form } from "@/components/Form";
 import { Button } from "@/components/ui/button";
@@ -13,6 +15,7 @@ import { useLogin } from "@/hooks/useLogin";
 
 export default function LoginPage() {
   const { loginAction } = useLogin();
+  const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -21,6 +24,10 @@ export default function LoginPage() {
   } = useForm<SignInFormData>({
     resolver: zodResolver(loginSchema),
   });
+
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
 
   return (
     <div className="mx-6 h-screen overflow-y-hidden lg:mx-auto lg:h-max lg:w-100">
@@ -57,14 +64,31 @@ export default function LoginPage() {
             >
               Senha
             </FieldLabel>
-            <Input
-              id="password"
-              autoComplete="off"
-              {...register("password")}
-              type="password"
-              placeholder="Digite sua senha"
-              className="placeholder:text-md border-app-gray-500 placeholder:text-app-gray-400 rounded-none border-0 border-b px-0 focus-visible:ring-0"
-            />
+            
+            <div className="relative flex items-center">
+              <Input
+                id="password"
+                autoComplete="off"
+                {...register("password")}
+                type={showPassword ? "text" : "password"}
+                placeholder="Digite sua senha"
+                className="placeholder:text-md border-app-gray-500 placeholder:text-app-gray-400 w-full rounded-none border-0 border-b px-0 pr-10 focus-visible:ring-0"
+              />
+              
+              <button
+                type="button"
+                onClick={togglePasswordVisibility}
+                className="absolute right-0 flex items-center justify-center text-app-gray-400 hover:text-app-gray-200 transition-colors focus:outline-none"
+                aria-label={showPassword ? "Esconder senha" : "Mostrar senha"}
+              >
+                {showPassword ? (
+                  <EyeOff size={20} strokeWidth={2} />
+                ) : (
+                  <Eye size={20} strokeWidth={2} />
+                )}
+              </button>
+            </div>
+
             {errors.password && (
               <span className="text-xs text-red-500">
                 {errors.password.message}
@@ -78,7 +102,7 @@ export default function LoginPage() {
           </Field>
         </Form>
         <p className="text-app-gray-400 mt-6 text-center text-sm italic">
-          Ainda não tem uma conta ?{" "}
+          Ainda não tem uma conta?{" "}
           <Link className="text-app-gray-200" href="/register">
             Cadastre-se
           </Link>

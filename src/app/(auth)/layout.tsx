@@ -12,7 +12,6 @@ export default function AuthLayout({ children }: { children: ReactNode }) {
         className="object-cover -z-10"
       />
       
-      {/* ADICIONADO: max-h-[95vh] e flex flex-col */}
       <div className="bg-app-gray-600 relative flex max-h-[95vh] w-full max-w-md flex-col overflow-y-auto rounded-2xl shadow-2xl [&::-webkit-scrollbar]:hidden">
         <div className="flex shrink-0 items-center justify-center gap-3 py-6 pt-8">
           <Image

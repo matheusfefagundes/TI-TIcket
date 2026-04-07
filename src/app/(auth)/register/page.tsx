@@ -7,12 +7,15 @@ import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
+import { useState } from "react"; 
+import { Eye, EyeOff } from "lucide-react";
 
 import { RegisterFormData, registerSchema } from "@/schemas/register";
 import { useRegister } from "@/hooks/useRegister";
 
 export default function RegisterPage() {
   const { isLoading, registerUser, apiError } = useRegister();
+    const [showPassword, setShowPassword] = useState(false);
 
   const {
     register,
@@ -22,6 +25,10 @@ export default function RegisterPage() {
     resolver: zodResolver(registerSchema),
   });
 
+  const togglePasswordVisibility = () => {
+    setShowPassword((prev) => !prev);
+  };
+
   return (
     <div className="w-full">
       <div className="border-app-gray-500 rounded-2xl border-2 p-4">
@@ -30,6 +37,7 @@ export default function RegisterPage() {
           description="Informe seu nome, e-mail e senha"
           onSubmit={handleSubmit(registerUser)}
         >
+          {/* Campo Nome */}
           <Field>
             <FieldLabel
               htmlFor="name"
@@ -50,6 +58,8 @@ export default function RegisterPage() {
               </span>
             )}
           </Field>          
+
+          {/* Campo E-mail */}
           <Field>
             <FieldLabel
               htmlFor="email"
@@ -72,6 +82,7 @@ export default function RegisterPage() {
           </Field>
 
           <div className="grid grid-cols-2 gap-4">
+            {/* Campo Senha */}
             <Field>
               <FieldLabel
                 htmlFor="password"
@@ -79,14 +90,23 @@ export default function RegisterPage() {
               >
                 Senha
               </FieldLabel>
-              <Input
-                id="password"
-                autoComplete="off"
-                {...register("password")}
-                type="password"
-                placeholder="Senha"
-                className="placeholder:text-md placeholder:text-app-gray-400 border-app-gray-500 rounded-none border-0 border-b px-0 focus-visible:ring-0"
-              />
+              <div className="relative flex items-center">
+                <Input
+                  id="password"
+                  autoComplete="off"
+                  {...register("password")}
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Senha"
+                  className="placeholder:text-md placeholder:text-app-gray-400 border-app-gray-500 w-full rounded-none border-0 border-b px-0 pr-8 focus-visible:ring-0"
+                />
+                <button
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className="absolute right-0 text-app-gray-400 hover:text-app-gray-200"
+                >
+                  {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                </button>
+              </div>
               {!errors.password ? (
                 <small className="text-app-gray-400 text-[10px] italic">
                   Mínimo de 6 dígitos
@@ -98,6 +118,7 @@ export default function RegisterPage() {
               )}
             </Field>
             
+            {/* Campo Confirme Senha */}
             <Field>
               <FieldLabel
                 htmlFor="passwordConfirm"
@@ -105,14 +126,23 @@ export default function RegisterPage() {
               >
                 Confirme
               </FieldLabel>
-              <Input
-                id="passwordConfirm"
-                autoComplete="off"
-                {...register("confirmPassword")}
-                type="password"
-                placeholder="Repita a senha"
-                className="placeholder:text-md placeholder:text-app-gray-400 border-app-gray-500 rounded-none border-0 border-b px-0 focus-visible:ring-0"
-              />
+              <div className="relative flex items-center">
+                <Input
+                  id="passwordConfirm"
+                  autoComplete="off"
+                  {...register("confirmPassword")}
+                  type={showPassword ? "text" : "password"}
+                  placeholder="Repita a senha"
+                  className="placeholder:text-md placeholder:text-app-gray-400 border-app-gray-500 w-full rounded-none border-0 border-b px-0 pr-8 focus-visible:ring-0"
+                />
+                <button
+                  type="button"
+                  onClick={togglePasswordVisibility}
+                  className="absolute right-0 text-app-gray-400 hover:text-app-gray-200"
+                >
+                  {showPassword ? <EyeOff size={16} /> : <Eye size={16} />}
+                </button>
+              </div>
               {!errors.confirmPassword ? (
                 <small className="text-app-gray-400 text-[10px] italic">
                   Mínimo de 6 dígitos
@@ -124,11 +154,13 @@ export default function RegisterPage() {
               )}
             </Field>
           </div>
+
           {apiError && (
             <div className="rounded border border-red-500 bg-red-500/10 p-2 text-center text-sm text-red-500">
               {apiError}
             </div>
           )}   
+
           <Field>
             <Button type="submit" variant="default" disabled={isLoading}>
               {isLoading ? "Cadastrando..." : "Cadastrar"}
@@ -136,10 +168,10 @@ export default function RegisterPage() {
           </Field>
         </Form>
         <p className="text-app-gray-400 mt-4 text-center text-sm italic">
-          Já tem uma conta ?{" "}
+          Já tem uma conta?{" "}
           <Link className="text-app-gray-200" href="/">
             Entrar
-          </Link>{" "}
+          </Link>
         </p>
       </div>
     </div>
