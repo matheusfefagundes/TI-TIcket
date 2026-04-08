@@ -7,10 +7,11 @@ export function useLogout() {
 
   async function logoutAction() {
     try {
-      await signOut();
+      await signOut({
+        redirect: false,
+      });
 
-      router.replace("/");
-      router.refresh();
+      router.push("/");
     } catch (error) {
       console.log(error);
       toast.error("Erro ao tentar sair da conta. Tente novamente mais tarde.");
