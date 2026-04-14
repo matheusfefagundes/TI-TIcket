@@ -95,7 +95,7 @@ SMTP_FROM="noreply@example.com"
 
 ### Passo 4: Configurar o Banco de Dados
 
-#### Opção A: Usando Docker Compose (Recomendado)
+#### Usando Docker Compose
 
 ```bash
 docker-compose up -d
