@@ -30,7 +30,7 @@ export default function LoginPage() {
   };
 
   return (
-    <div className="mx-6 h-screen overflow-y-hidden lg:mx-auto lg:h-max lg:w-100">
+    <div className="mx-6 h-auto lg:mx-auto lg:h-max lg:w-100">
       <div className="border-app-gray-500 rounded-2xl border-2 p-6">
         <Form
           title="Acesse o portal"
