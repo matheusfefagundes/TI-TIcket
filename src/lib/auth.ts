@@ -3,8 +3,8 @@ import { prisma } from "./prisma";
 import { Adapter } from "next-auth/adapters";
 import CredentialsProvider from "next-auth/providers/credentials";
 import { compare } from "bcrypt";
+import type { Session, User } from "next-auth";
 import type { JWT } from "next-auth/jwt";
-import type { Session } from "next-auth";
 
 export const authOptions = {
   adapter: PrismaAdapter(prisma) as Adapter,
@@ -44,10 +44,21 @@ export const authOptions = {
     }),
   ],
   session: {
-    strategy: "jwt", 
+    strategy: "jwt" as const, 
+    maxAge: 24 * 60 * 60,
   },
   callbacks: {
-    jwt: async ({ token, user, trigger, session }) => {
+    jwt: async ({
+      token,
+      user,
+      trigger,
+      session,
+    }: {
+      token: JWT;
+      user?: User & { id: string };
+      trigger?: "signIn" | "signUp" | "update";
+      session?: { image?: string };
+    }) => {
       if (user) {
         token.id = user.id;
         token.role = user.role;
@@ -59,14 +70,11 @@ export const authOptions = {
 
       return token;
     },
-    session: ({ session, token }) => {
-      if (token && session.user) {
-        if (token.id) {
-          session.user.id = token.id;
-        }
-        if (token.role) {
-          session.user.role = token.role;
-        }
+    // Tipagem direta aqui também.
+    session: ({ session, token }: { session: Session; token: JWT }) => {
+      if (token) {
+        session.user.id = token.id;
+        session.user.role = token.role;
         session.user.image = token.picture as string | null | undefined;
       }
 

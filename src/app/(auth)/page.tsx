@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
-import { Eye, EyeOff } from "lucide-react"; 
+import { Eye, EyeOff } from "lucide-react";
 
 import { Form } from "@/components/Form";
 import { Button } from "@/components/ui/button";
@@ -12,8 +12,23 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginSchema, SignInFormData } from "@/schemas/login";
 import { useLogin } from "@/hooks/useLogin";
+import { useEffect } from "react";
+import { toast } from "sonner";
 
 export default function LoginPage() {
+  useEffect(() => {
+    // 1. Verifica se a URL possui o parâmetro que o Middleware enviou
+    const urlParams = new URLSearchParams(window.location.search);
+
+    if (urlParams.get("expired") === "true") {
+      // 2. Dispara o toast vermelho
+      toast.error("A sua sessão expirou. Por favor, faça login novamente.");
+
+      // 3. Limpa a URL na barra de endereços (remove o ?expired=true)
+      window.history.replaceState(null, "", window.location.pathname);
+    }
+  }, []);
+
   const { loginAction } = useLogin();
   const [showPassword, setShowPassword] = useState(false);
 
@@ -64,7 +79,7 @@ export default function LoginPage() {
             >
               Senha
             </FieldLabel>
-            
+
             <div className="relative flex items-center">
               <Input
                 id="password"
@@ -74,7 +89,7 @@ export default function LoginPage() {
                 placeholder="Digite sua senha"
                 className="placeholder:text-md border-app-gray-500 placeholder:text-app-gray-400 w-full rounded-none border-0 border-b px-0 pr-10 focus-visible:ring-0"
               />
-              
+
               <button
                 type="button"
                 onClick={togglePasswordVisibility}
